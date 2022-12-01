@@ -1,2 +1,2 @@
-# OOP-Self-Projects-in-Java
-OOP self projects in Java for me to apply my knowledge
+# OOP self projects in Java
+## real world applications brainstormed and attempted
