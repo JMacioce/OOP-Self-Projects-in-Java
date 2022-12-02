@@ -20,8 +20,8 @@ public class InterestCalculator {
             } catch (InputMismatchException e) {
                 System.out.println("(Please input a number!)\n");
                 s.nextLine();
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
                 s.nextLine();
             }
         }
@@ -38,8 +38,8 @@ public class InterestCalculator {
             } catch (InputMismatchException e) {
                 System.out.println("(Please input a number!)\n");
                 s.nextLine();
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
                 s.nextLine();
             }
         }
@@ -56,8 +56,8 @@ public class InterestCalculator {
             } catch (InputMismatchException e) {
                 System.out.println("(Please input a whole number!)\n");
                 s.nextLine();
-            } catch (Exception ex) {
-                System.out.println(ex.getMessage());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
                 s.nextLine();
             }
         }
