@@ -13,8 +13,15 @@ public class InterestCalculator {
             System.out.print("Enter initial savings: ");
             try {
                 initialSavings = s.nextDouble();
+                if (initialSavings <= 0) {
+                    throw new Exception("(Inital Savings must be greater than 0)\n");
+                }
                 needInput = false;
             } catch (InputMismatchException e) {
+                System.out.println("(Please input a number!)\n");
+                s.nextLine();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
                 s.nextLine();
             }
         }
@@ -24,19 +31,33 @@ public class InterestCalculator {
             System.out.print("Enter interest rate (ex. 8.2% = 8.2): ");
             try {
                 interestRate = (s.nextDouble() / 100);
+                if (interestRate <= 0) {
+                    throw new Exception("(Interest Rate must be greater than 0)\n");
+                }
                 needInput = false;
             } catch (InputMismatchException e) {
+                System.out.println("(Please input a number!)\n");
+                s.nextLine();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
                 s.nextLine();
             }
         }
         needInput = true;
 
         while (needInput) {
-            System.out.print("Enter years of interest to accrue: ");
+            System.out.print("Enter years of interest: ");
             try {
                 years = s.nextInt();
+                if (years <= 0) {
+                    throw new Exception("(Years must be greater than 0)\n");
+                }
                 needInput = false;
             } catch (InputMismatchException e) {
+                System.out.println("(Please input a whole number!)\n");
+                s.nextLine();
+            } catch (Exception ex) {
+                System.out.println(ex.getMessage());
                 s.nextLine();
             }
         }
