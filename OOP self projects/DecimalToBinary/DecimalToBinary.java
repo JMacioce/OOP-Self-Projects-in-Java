@@ -11,6 +11,6 @@ public class DecimalToBinary {
 
         binary = Integer.toBinaryString(userDecimal);
 
-        System.out.println("Binary representation of" + userDecimal + " is " + binary);
+        System.out.println("Decimal: " + userDecimal + "\nBinary: " + binary);
     }
 }
