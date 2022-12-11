@@ -1,11 +1,21 @@
 public class team {
-    private String teamName;
+    public String teamName;
+    public int teamRating;
 
-    public team(String teamName) {
+    public team(String teamName, int teamRating) {
         this.teamName = teamName;
+        this.teamRating = teamRating;
+    }
+
+    public String getTeamName() {
+        return this.teamName;
+    }
+
+    public int getTeamRating() {
+        return this.teamRating;
     }
 
     public String toString() {
-        return (teamName);
+        return teamName + ": " + teamRating;
     }
 }
