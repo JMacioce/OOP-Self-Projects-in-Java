@@ -16,6 +16,6 @@ public class team {
     }
 
     public String toString() {
-        return teamName + ": " + teamRating;
+        return this.teamName + ": " + this.teamRating;
     }
 }
