@@ -7,7 +7,7 @@ public class standings {
         s[0] = new team("Bay City Bruisers", 88);
         s[1] = new team("Choco Mountain Rockies", 84);
         s[2] = new team("Hotel California Sound Check", 78);
-        s[3] = new team("Rapture Kindlies", 91);
+        s[3] = new team("Rapture BioShock", 91);
         s[4] = new team("Nook Inc. Tanukis", 85);
         s[5] = new team("Lavender Town Cubones", 82);
     }
@@ -38,6 +38,12 @@ public class standings {
         System.out.println("Teams Sorted by Rating: ");
         for (team name : s) {
             System.out.println(name);
+        }
+        System.out.println();
+
+        System.out.println("Standings: ");
+        for (team name : s) {
+            name.printRecords();
         }
     }
 }
