@@ -21,6 +21,18 @@ public class team {
         return this.teamRating;
     }
 
+    public void addWin(team x) {
+        this.Wins += 1;
+    }
+
+    public void addLoss(team x) {
+        this.Losses += 1;
+    }
+
+    public void addDraw(team x) {
+        this.Draws += 1;
+    }
+
     public String toString() {
         return teamName + ": " + teamRating;
     }

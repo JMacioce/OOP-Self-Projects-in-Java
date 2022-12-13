@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class standings {
-    static team[] s = new team[6];
+    public static team[] s = new team[6];
 
     public static void setTeams() {
         s[0] = new team("Bay City Bruisers", 88);
@@ -45,5 +45,13 @@ public class standings {
         for (team name : s) {
             name.printRecords();
         }
+
+        game(s[0].teamRating, s[1].teamRating);
+
+        System.out.println("Standings: ");
+        for (team name : s) {
+            name.printRecords();
+        }
     }
+
 }
