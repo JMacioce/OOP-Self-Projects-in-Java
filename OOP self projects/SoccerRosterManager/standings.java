@@ -2,6 +2,7 @@ import java.util.*;
 
 public class standings {
     public static team[] s = new team[6];
+    public static match[] games = new match[100];
 
     public static void setTeams() {
         s[0] = new team("Bay City Bruisers", 88);
@@ -25,14 +26,46 @@ public class standings {
         }
     }
 
+    public static void sortTeamsByPoints(team[] s) {
+        for (team name : s) {
+            name.getTeamPoints();
+        }
+        for (int i = 0; i < s.length; i++) {
+            for (int j = i + 1; j < s.length; j++) {
+                team tmp = null;
+                if (s[i].Points < s[j].Points) {
+                    tmp = s[i];
+                    s[i] = s[j];
+                    s[j] = tmp;
+                }
+            }
+        }
+    }
+
+    public static void callMatchEngine() {
+        games[0] = new match(s[0], s[1]);
+        games[1] = new match(s[2], s[3]);
+        games[2] = new match(s[4], s[5]);
+        games[3] = new match(s[0], s[2]);
+        games[4] = new match(s[1], s[4]);
+        games[5] = new match(s[3], s[5]);
+        games[6] = new match(s[0], s[5]);
+        games[7] = new match(s[2], s[1]);
+        games[8] = new match(s[4], s[3]);
+        games[9] = new match(s[0], s[4]);
+        games[10] = new match(s[1], s[3]);
+        games[11] = new match(s[2], s[5]);
+        games[12] = new match(s[0], s[3]);
+        games[13] = new match(s[2], s[4]);
+        games[14] = new match(s[1], s[5]);
+
+        for (int i = 0; i < 15; i++) {
+            games[i].record();
+        }
+    }
+
     public static void main(String[] args) {
         setTeams();
-        System.out.println("Teams: ");
-        for (team name : s) {
-            System.out.println(name);
-        }
-        System.out.println();
-
         sortTeamsByRating(s);
 
         System.out.println("Teams Sorted by Rating: ");
@@ -41,17 +74,16 @@ public class standings {
         }
         System.out.println();
 
-        System.out.println("Standings: ");
-        for (team name : s) {
-            name.printRecords();
+        for (int i = 1; i < 5; i++) {
+            callMatchEngine();
+            sortTeamsByPoints(s);
+            System.out.println("Standings Round " + i + ": ");
+            for (team name : s) {
+                name.printRecords();
+            }
+            System.out.println();
         }
 
-        game(s[0].teamRating, s[1].teamRating);
-
-        System.out.println("Standings: ");
-        for (team name : s) {
-            name.printRecords();
-        }
     }
 
 }
