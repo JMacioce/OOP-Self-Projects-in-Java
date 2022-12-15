@@ -24,8 +24,8 @@ public class match {
                 t2.addWin(t2);
                 break;
             } else if (aNum <= t1.teamRating && bNum > t2.teamRating) {
-                t2.addLoss(t2);
                 t1.addWin(t1);
+                t2.addLoss(t2);
                 break;
             } else if (i == 8) {
                 t1.addDraw(t1);
