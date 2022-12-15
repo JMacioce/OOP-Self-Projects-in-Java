@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class standings {
     public static team[] s = new team[6];
     public static match[] games = new match[100];
