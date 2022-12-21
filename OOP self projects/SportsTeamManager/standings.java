@@ -5,7 +5,7 @@ public class standings {
 
     public static void setTeams() {
         s[0] = new team("Troia Chocobos", 84);
-        s[1] = new team("Green Cap Mansions", 85);
+        s[1] = new team("Green Capped Mansions", 85);
         s[2] = new team("Giga Impact Snorlaxs", 93);
         s[3] = new team("PK Starstorms", 90);
         s[4] = new team("Roma DaVincis", 87);
